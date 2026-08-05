@@ -1,0 +1,107 @@
+\input{style}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries vi 虎の巻} \quad {\Large\bfseries - 第2初級編 -}
+\end{center}
+
+\begin{multicols}{2}
+
+\begin{cheatbox}{起動}
+\begin{small}
+シェル(コマンドライン)でコマンドを入力して起動。
+\end{small}
+\begin{itemize}
+  \item \texttt{\bfseries vi <Enter>}：空の内容で起動
+  \item \texttt{\bfseries vi <filename> <Enter>}：ファイルを開く
+\end{itemize}
+\end{cheatbox}
+
+\begin{cheatbox}{終了}
+\begin{small}
+\texttt{\bfseries vi} の中では専用コマンドを使って終了。
+\end{small}
+\begin{itemize}
+  \item \texttt{\bfseries ZZ}：保存して終了
+  \item \texttt{\bfseries :w <Enter>}: 保存する
+  \item \texttt{\bfseries :wq <Enter>}: 保存して終了
+  \item \texttt{\bfseries :q <Enter>}: 保存してあれば終了する
+  \item \texttt{\bfseries :q! <Enter>}：保存せず終了
+\end{itemize}
+\end{cheatbox}
+
+\begin{cheatbox}{移動}
+\begin{small}
+コマンドで移動。
+\end{small}
+\begin{itemize}
+  \item \texttt{\bfseries h}：左
+  \item \texttt{\bfseries j}：下
+  \item \texttt{\bfseries k}：上
+  \item \texttt{\bfseries l}：右
+\end{itemize}
+\begin{small}
+矢印キーも使える。
+\end{small}
+\begin{itemize}
+  \item \texttt{\bfseries 0}：行頭
+  \item \texttt{\bfseries \$}：行末
+\end{itemize}
+\end{cheatbox}
+
+\begin{cheatbox}{入力}
+\begin{small}
+\texttt{\bfseries i} や \texttt{\bfseries a} で入力モードに入ると、キーボードからの入力はコマンドではなく、テキストとして入力される。
+入力モードからコマンドモードに戻るには \texttt{\bfseries Esc} を押す。
+\end{small}
+\begin{itemize}
+  \item \texttt{\bfseries i}：カーソル位置から挿入
+  \item \texttt{\bfseries a}：カーソルの後ろから挿入
+  \item \texttt{\bfseries o}: カーソルの下の行から挿入
+  \item \texttt{\bfseries O}: カーソルの上の行から挿入
+  \item \texttt{\bfseries I}: 行頭(インデントを除く)から挿入
+  \item \texttt{\bfseries A}: 行末から挿入
+  \item \texttt{\bfseries Esc}：コマンドモードへ戻る
+\end{itemize}
+\begin{small}
+分からなくなったら、とにかく \texttt{\bfseries Esc} を押してコマンドモードに戻ろう。
+\end{small}
+\end{cheatbox}
+
+\begin{cheatbox}{編集}
+\begin{itemize}
+  \item \texttt{\bfseries x}：1文字削除
+  \item \texttt{\bfseries 3x}：3文字削除
+  \item \texttt{\bfseries dd}：1行削除
+  \item \texttt{\bfseries 3dd}：3行削除
+  \item \texttt{\bfseries dw}：1単語削除
+  \item \texttt{\bfseries 3dw}：3単語削除
+  \item \texttt{\bfseries J}：2行を1行に連結
+  \item \texttt{\bfseries 3J}：3行を1行に連結
+\end{itemize}
+\end{cheatbox}
+
+\begin{cheatbox}{コピー}
+\begin{itemize}
+  \item \texttt{\bfseries yy}：1行コピー
+  \item \texttt{\bfseries 3yy}：3行コピー
+  \item \texttt{\bfseries p}：カーソルの下の行に貼り付け
+  \item \texttt{\bfseries P}：カーソルの上の行に貼り付け
+\end{itemize}
+\end{cheatbox}
+
+\begin{cheatbox}{取り消し / 繰り返し}
+\begin{itemize}
+  \item \texttt{\bfseries u}：直前の編集を取り消す
+  \item \texttt{\bfseries .}：直前の編集を繰り返す
+\end{itemize}
+\texttt{\bfseries nvi} 系と \texttt{\bfseries Vim} 系で動作が異なる。
+注意して慣れよう。
+\end{cheatbox}
+
+\end{multicols}
+
+\input{logo}
+
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[a4paper,10pt]{ltjsarticle}
+
+\usepackage[
+  top=10mm,
+  bottom=10mm,
+  left=10mm,
+  right=10mm
+]{geometry}
+
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+
+\usepackage{graphicx}
+\usepackage{eso-pic}
+
+% 段の間隔
+\setlength{\columnsep}{8mm}
+
+% 箇条書きを詰める
+\setlist[itemize]{
+  leftmargin=1.5em,
+  itemsep=1pt,
+  topsep=2pt,
+  parsep=0pt
+}
+
+% チートシート用の枠
+\newtcolorbox{cheatbox}[1]{
+  title=#1,
+  colback=white,
+  colframe=black,
+  coltitle=white,
+  fonttitle=\bfseries,
+  boxrule=0.5pt,
+  arc=1mm,
+  left=2mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm,
+  before skip=2mm,
+  after skip=2mm
+}
+
+\pagestyle{empty}
