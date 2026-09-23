@@ -1,10 +1,12 @@
-TEXS = vi-sheet1 vi-sheet2
-
-PDFS = $(TEXS:%=%.pdf)
+PDFS = vi-sheet1.pdf vi-sheet2.pdf
 
 all: $(PDFS)
 
-%.pdf: %.tex style.tex logo.tex
+$(PDFS): style.tex logo.tex
+
+.SUFFIXES: .tex .pdf
+
+.tex.pdf:
 	latexmk -lualatex $<
 
 clean:
